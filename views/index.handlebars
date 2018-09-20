@@ -1,0 +1,42 @@
+<div id="content">
+    <button id="scrape-button">Check for new stories!</button>
+
+    {{#each articleArray}}
+    <div class="article-box">
+        <h2 class="article-title">{{title}}</h2>
+        <img class="article-image" src="{{imageLink}}" alt="The picture did not show">
+        <p class="article-summary">{{summary}}</p>
+        <button class="article-link-button article-button" onclick="location.href='{{link}}'">Go to Article on npr.org</button>
+        <button class="article-notes-button article-button" data-id="{{_id}}" data-title="{{title}}">Create and Review Notes</button>
+
+    </div>
+    {{/each}}
+
+</div>
+
+<div id="note-background" class="note-toggle">
+</div>
+<div id="note-block" class="note-toggle">
+    <div id="note-content">
+        <h2 id="note-article-title">Article Title</h2>
+        <form>
+            <label>Note Title</label><br>
+            <input id="note-title" type="text"><br>
+            <label>Note Text</label><br>
+            <textarea id="note-text" type="text"></textarea><br>
+        </form>
+        <button id="close-button" class="comment-button">Close Notes</button>
+        <button data-id="" id="note-save-button" class="comment-button">Save Note</button>
+        
+        
+        <div id="comment-box">
+            
+        </div>
+
+    <i id="close-x" class="fas fa-times"></i>
+    </div>
+</div>
+
+<script src="./javascript/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
